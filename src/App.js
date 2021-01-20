@@ -1,11 +1,12 @@
 import React from 'react';
+import {connect} from 'react-redux'
 
 class App extends React.Component {
 
   componentDidMount() {
-    fetch('http://localhost:3040/api/v1/questions')
-    .then(response => response.json())
-    .then(data => console.log(data))
+    // fetch('http://localhost:3040/api/v1/questions')
+    // .then(response => response.json())
+    // .then(data => console.log(data))
   }
 
   render() {
@@ -17,4 +18,10 @@ class App extends React.Component {
   }
 }
 
-export default App;
+// const mapStateToProps = (state) => {
+//   return (
+//     questions: state.questions
+//   )
+// }
+
+export default connect(null, {fetchQuestions})(App);
