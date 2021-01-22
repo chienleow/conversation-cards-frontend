@@ -1,4 +1,6 @@
 import React from 'react'
+import {connect} from 'react-redux'
+
 import Questions from '../components/Questions'
 import QuestionInput from '../components/QuestionInput'
 
@@ -14,4 +16,4 @@ class QuestionsContainer extends React.Component {
     }
 }
 
-export default QuestionsContainer
+export default connect()(QuestionsContainer)
