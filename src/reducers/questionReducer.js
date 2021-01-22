@@ -1,6 +1,11 @@
 const initialState = { questions: [] }
 
-export default function questionReducer(state = initialState, action ) {
+export default function questionReducer(state = initialState, action) {
     
-    return state
+    switch (action.type) {
+        case 'FETCH_QUESTIONS':
+            return {}
+        default:
+            return state
+    }
 }

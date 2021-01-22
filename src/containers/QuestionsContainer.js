@@ -8,7 +8,7 @@ import QuestionInput from '../components/QuestionInput'
 class QuestionsContainer extends React.Component {
 
     componentDidMount() {
-        fetchQuestions()
+        this.props.fetchQuestions()
     }
 
     render() {
