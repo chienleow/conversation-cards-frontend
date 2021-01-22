@@ -1,11 +1,14 @@
 import React from 'react'
+import Questions from '../components/Questions'
+import QuestionInput from '../components/QuestionInput'
 
 class QuestionsContainer extends React.Component {
 
     render() {
         return (
             <div>
-                QuestionsContainer
+                <QuestionInput/>
+                <Questions/>
             </div>
         )
     }
