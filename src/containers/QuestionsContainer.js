@@ -15,7 +15,7 @@ class QuestionsContainer extends React.Component {
         return (
             <div>
                 <QuestionInput/>
-                <Questions/>
+                <Questions questions={this.props.questions}/>
             </div>
         )
     }

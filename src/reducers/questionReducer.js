@@ -4,7 +4,8 @@ export default function questionReducer(state = initialState, action) {
     
     switch (action.type) {
         case 'FETCH_QUESTIONS':
-            return {}
+            return {questions: action.payload}
+            // this is your new Redux state
         default:
             return state
     }
