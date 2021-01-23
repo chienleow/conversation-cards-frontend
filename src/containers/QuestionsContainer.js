@@ -12,18 +12,20 @@ class QuestionsContainer extends React.Component {
     }
 
     render() {
+        console.log("this.props:", this.props)
         return (
             <div>
                 <QuestionInput/>
-                <Questions questions={this.props.questions}/>
+                <Questions questions={this.props}/>
             </div>
         )
     }
 }
 
 const mapStateToProps = state => {
+    // console.log("mapStateTopProps", state[0])
     return {
-        questions: state.questions
+        questions: state[0]
     }
 }
 
