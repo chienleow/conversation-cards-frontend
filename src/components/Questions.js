@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 // functional component (they are just functions, they don't need render)
 const Questions = (props) => {

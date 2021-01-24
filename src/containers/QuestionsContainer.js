@@ -1,9 +1,9 @@
-import React from 'react'
-import {connect} from 'react-redux'
+import React from 'react';
+import {connect} from 'react-redux';
 
-import {fetchQuestions} from '../actions/fetchQuestions'
-import Questions from '../components/Questions'
-import QuestionInput from '../components/QuestionInput'
+import {fetchQuestions} from '../actions/fetchQuestions';
+import Questions from '../components/Questions';
+import QuestionInput from '../components/QuestionInput';
 
 class QuestionsContainer extends React.Component {
 

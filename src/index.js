@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {createStore, applyMiddleware, compose} from 'redux';
-import thunk from 'redux-thunk'
-import { Provider } from 'react-redux'
-import questionReducer from './reducers/questionReducer'
+import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
+import questionReducer from './reducers/questionReducer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from './App';
 
