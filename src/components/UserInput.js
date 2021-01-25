@@ -6,6 +6,10 @@ class UserInput extends React.Component {
 
     state = {name: ''}
 
+    handleChange = (event) => {
+        debugger
+    }
+
     // need state to create a form, onchange, handlesubmit
 
     render() {
@@ -14,7 +18,7 @@ class UserInput extends React.Component {
                 <Form>
                     <Form.Group controlId="formBasicEmail">
                         {/* <Form.Label>Username</Form.Label> */}
-                        <Form.Control type="text" placeholder="Enter username" value={this.state.name}/>
+                        <Form.Control type="text" placeholder="Enter username" value={this.state.name} onChange={this.handleChange}/>
                     </Form.Group>
 
                     <Button variant="primary" type="submit">
