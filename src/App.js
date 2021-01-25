@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import HomeContainer from './containers/HomeContainer'
-import QuestionsContainer from './containers/QuestionsContainer'
+import GameContainer from './containers/GameContainer'
 import Navbar from './components/NavBar'
 /// do react-router-dom in here, use <Switch></Switch>
 
@@ -12,7 +12,7 @@ class App extends React.Component {
       <div className="App">
         <Navbar/>
         <HomeContainer/>
-        <QuestionsContainer/>
+        <GameContainer/>
       </div>
     );
   }

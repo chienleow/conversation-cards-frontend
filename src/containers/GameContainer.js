@@ -5,7 +5,7 @@ import {fetchQuestions} from '../actions/fetchQuestions';
 import Questions from '../components/Questions';
 import QuestionInput from '../components/QuestionInput';
 
-class QuestionsContainer extends React.Component {
+class GameContainer extends React.Component {
 
     componentDidMount() {
         this.props.fetchQuestions()
@@ -30,4 +30,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {fetchQuestions})(QuestionsContainer)
+export default connect(mapStateToProps, {fetchQuestions})(GameContainer)
