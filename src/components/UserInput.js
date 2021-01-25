@@ -2,7 +2,7 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {connect} from 'react-redux';
-import addUser from '../actions/addUser';
+import {addUser} from '../actions/addUser';
 
 class UserInput extends React.Component {
 

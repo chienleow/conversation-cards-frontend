@@ -1,5 +1,5 @@
 export const addUser = (data) => {
-
+    
     return (dispatch) => {
         fetch('http://localhost:3040/api/v1/users', {
             headers: {
