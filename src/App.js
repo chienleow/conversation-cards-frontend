@@ -6,10 +6,6 @@ import Navbar from './components/NavBar'
 
 class App extends React.Component {
 
-  // componentDidMount() {
-   
-  // }
-
   render() {
     return (
       <div className="App">
