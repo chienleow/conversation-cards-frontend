@@ -1,6 +1,8 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import {connect} from 'react-redux';
+import addUser from '../actions/addUser';
 
 class UserInput extends React.Component {
 
@@ -12,12 +14,14 @@ class UserInput extends React.Component {
         })
     }
 
-    // need state to create a form, onchange, handlesubmit
+    handleSubmit = () => {
+
+    }
 
     render() {
         return (
             <div>
-                <Form>
+                <Form onSubmit={this.handleSubmit}>
                     <Form.Group controlId="formBasicEmail">
                         {/* <Form.Label>Username</Form.Label> */}
                         <Form.Control type="text" placeholder="Enter username" value={this.state.name} name="name" onChange={this.handleChange}/>
@@ -32,4 +36,4 @@ class UserInput extends React.Component {
     }
 }
 
-export default UserInput
+export default connect(null, {addUser})(UserInput)
