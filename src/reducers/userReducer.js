@@ -1,6 +1,6 @@
 const initialState = []
 
-export default function userReducer(state = initialState, action) {
+export function userReducer(state = initialState, action) {
     
     switch (action.type) {
         case 'NEW_USER':
