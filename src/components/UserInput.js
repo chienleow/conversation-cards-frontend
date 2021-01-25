@@ -11,7 +11,7 @@ class UserInput extends React.Component {
             <div>
                 <Form>
                     <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Username</Form.Label>
+                        {/* <Form.Label>Username</Form.Label> */}
                         <Form.Control type="text" placeholder="Enter username" />
                     </Form.Group>
 
