@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 
 import {fetchQuestions} from '../actions/fetchQuestions';
 import Questions from '../components/Questions';
-import QuestionInput from '../components/QuestionInput';
 
 class GameContainer extends React.Component {
 
@@ -16,7 +15,6 @@ class GameContainer extends React.Component {
         //when props or state change, it rerender
         return (
             <div>
-                <QuestionInput/>
                 <Questions questions={this.props}/>
             </div>
         )
