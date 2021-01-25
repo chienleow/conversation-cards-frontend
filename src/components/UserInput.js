@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {connect} from 'react-redux';
 import {addUser} from '../actions/addUser';
+// import {Redirect} from 'react-router-dom';
 
 class UserInput extends React.Component {
 
@@ -16,7 +17,7 @@ class UserInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addUser(this.state)
+        this.props.addUser(this.state, this.props.history)
     }
 
     render() {
