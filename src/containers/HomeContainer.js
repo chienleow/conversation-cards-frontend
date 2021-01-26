@@ -10,7 +10,7 @@ class HomeContainer extends React.Component {
                 <Jumbotron>
                     <h1>Get Started</h1>
                     <p>Welcome to DIY Conversation Cards, please enter username to get started.</p>
-                    <UserInput history={this.props.history}/>
+                    <UserInput/>
                 </Jumbotron>
             </div>
         )

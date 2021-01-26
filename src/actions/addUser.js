@@ -1,4 +1,4 @@
-export const addUser = (name, history) => {
+export const addUser = (name) => {
 
     return (dispatch) => {
         fetch('http://localhost:3040/api/v1/users', {
@@ -13,7 +13,6 @@ export const addUser = (name, history) => {
         .then(name => {
             dispatch({type: 'NEW_USER', payload: name})
             // dispatch adds new user to Redux Store
-            // history.push('/form')
         })
     }
 }

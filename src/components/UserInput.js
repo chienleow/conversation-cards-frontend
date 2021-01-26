@@ -17,7 +17,7 @@ class UserInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addUser(this.state.name, this.props.history)
+        this.props.addUser(this.state.name)
         this.setState({
             name: '',
             redirect: true

@@ -10,7 +10,6 @@ class GameContainer extends React.Component {
     }
 
     render() {
-        // console.log("this.props:", this.props)
         //when props or state change, it re-renders
         return (
             <div>

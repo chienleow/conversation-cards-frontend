@@ -13,9 +13,9 @@ class App extends React.Component {
       <div className="App">
         <Navbar/>
           <Switch>
-            <Route exact path='/form' render={(props) => <FormContainer history={this.props.history}/>}/>
-            <Route exact path='/start-game' render={(props) => <GameContainer history={this.props.history}/>}/>
-            <Route exact path='/' render={(props) => <HomeContainer history={this.props.history}/>}/>
+            <Route exact path='/form' component={FormContainer}/>
+            <Route exact path='/start-game' component={GameContainer}/>
+            <Route exact path='/' component={HomeContainer}/>
           </Switch>
       </div>
     );

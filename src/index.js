@@ -2,10 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import {rootReducer} from './reducers/reducers';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {createBrowserHistory} from 'history';
 import {BrowserRouter} from 'react-router-dom';
 
 import App from './App';
@@ -14,12 +13,10 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
-export const history = createBrowserHistory()
-
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter history={history}>
-      <App history={history}/>
+    <BrowserRouter>
+      <App/>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')
