@@ -3,10 +3,11 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {connect} from 'react-redux';
 import {addUser} from '../actions/addUser';
+import {Redirect} from 'react-router-dom';
 
 class UserInput extends React.Component {
 
-    state = {name: ''}
+    state = {name: '', redirect: false}
 
     handleChange = (event) => {
         this.setState({
@@ -18,31 +19,29 @@ class UserInput extends React.Component {
         event.preventDefault()
         this.props.addUser(this.state.name, this.props.history)
         this.setState({
-            name: ''
+            name: '',
+            redirect: true
         })
     }
 
     render() {
-        return (
-            <div>
-                <Form onSubmit={this.handleSubmit}>
-                    <Form.Group>
-                        <Form.Control type="text" placeholder="Enter username" value={this.state.name} name="name" onChange={this.handleChange}/>
-                    </Form.Group>
+        if (this.state.redirect === false)
+            return (
+                <div>
+                    <Form onSubmit={this.handleSubmit}>
+                        <Form.Group>
+                            <Form.Control type="text" placeholder="Enter username" value={this.state.name} name="name" onChange={this.handleChange}/>
+                        </Form.Group>
 
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
-                </Form>
-            </div>
-        )
+                        <Button variant="primary" type="submit">
+                            Submit
+                        </Button>
+                    </Form>
+                </div>
+            )
+        else
+            return <Redirect to="/form"/>
     }
 }
 
-function mapDispatchToProps(dispatch){
-    return {
-        addUser: (name, history) => dispatch(addUser(name, history))
-    }
-}
-
-export default connect(null, mapDispatchToProps)(UserInput)
+export default connect(null, {addUser})(UserInput)

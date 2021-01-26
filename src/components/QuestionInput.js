@@ -17,8 +17,11 @@ class QuestionInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        // debugger
-        this.props.addQuestion(this.state, this.props.user.id)
+        this.props.addQuestion({
+            sentence: this.state.sentence, 
+            category: this.state.category, 
+            user_id: this.props.state.user[0].id
+        })
         this.setState({
             sentence: '',
             category: ''
@@ -29,7 +32,7 @@ class QuestionInput extends React.Component {
         return (
             <div>
                 <Jumbotron>
-                    <h1>Welcome, xxx</h1>
+                    <h1>Welcome {this.props.state.user.length !== 0 ? this.props.state.user[0].name : "..."}</h1>
                     <Form onSubmit={this.handleSubmit}>
                         <Form.Group>
                             <Form.Label>Question</Form.Label>
@@ -47,4 +50,10 @@ class QuestionInput extends React.Component {
     }
 }
 
-export default connect(null, {addQuestion})(QuestionInput)
+const mapStateToProps = state => {
+    return {
+       state
+    }
+}
+
+export default connect(mapStateToProps, {addQuestion})(QuestionInput)

@@ -12,7 +12,8 @@ export const addUser = (name, history) => {
         .then(response => response.json())
         .then(name => {
             dispatch({type: 'NEW_USER', payload: name})
-            history.push('/form')
+            // dispatch adds new user to Redux Store
+            // history.push('/form')
         })
     }
 }

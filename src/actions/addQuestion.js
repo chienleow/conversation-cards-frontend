@@ -7,7 +7,7 @@ export const addQuestion = (data) => {
                 'Accept': 'application/json'
             },
             method: 'POST',
-            body: JSON.stringify(data)
+            body: JSON.stringify({question: data})
         })
         .then(response => response.json())
         .then(question => {
