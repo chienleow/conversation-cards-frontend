@@ -5,7 +5,8 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import {rootReducer} from './reducers/reducers';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { createBrowserHistory } from 'history'
+import {createBrowserHistory} from 'history';
+import {BrowserRouter} from 'react-router-dom';
 
 import App from './App';
 
@@ -17,7 +18,9 @@ export const history = createBrowserHistory()
 
 ReactDOM.render(
   <Provider store={store}>
-    <App history={history}/>
+    <BrowserRouter history={history}>
+      <App history={history}/>
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 );

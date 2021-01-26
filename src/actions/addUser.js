@@ -1,4 +1,4 @@
-export const addUser = (data) => {
+export const addUser = (name, history) => {
 
     return (dispatch) => {
         fetch('http://localhost:3040/api/v1/users', {
@@ -7,12 +7,12 @@ export const addUser = (data) => {
                 'Accept': 'application/json'
             },
             method: 'POST',
-            body: JSON.stringify(data)
+            body: JSON.stringify({name: name})
         })
         .then(response => response.json())
         .then(name => {
             dispatch({type: 'NEW_USER', payload: name})
+            history.push('/form')
         })
-
     }
 }

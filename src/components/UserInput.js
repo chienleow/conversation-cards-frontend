@@ -16,8 +16,7 @@ class UserInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addUser(this.state)
-        this.props.history.push('/form')
+        this.props.addUser(this.state.name, this.props.history)
         this.setState({
             name: ''
         })
@@ -40,4 +39,10 @@ class UserInput extends React.Component {
     }
 }
 
-export default connect(null, {addUser})(UserInput)
+function mapDispatchToProps(dispatch){
+    return {
+        addUser: (name, history) => dispatch(addUser(name, history))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(UserInput)
