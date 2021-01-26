@@ -16,7 +16,8 @@ class UserInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addUser(this.state, this.props.history)
+        this.props.addUser(this.state)
+        this.props.history.push('/form')
         this.setState({
             name: ''
         })

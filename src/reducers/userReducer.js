@@ -2,7 +2,7 @@ const initialState = []
 
 export function userReducer(state = initialState, action) {
     
-    switch (action.type) {
+    switch(action.type) {
         case 'NEW_USER':
             return [action.payload.data]
             // data is a property of payload

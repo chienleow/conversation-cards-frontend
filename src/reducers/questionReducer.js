@@ -2,7 +2,7 @@ const initialState = []
 
 export function questionReducer(state = initialState, action) {
     
-    switch (action.type) {
+    switch(action.type) {
         case 'FETCH_QUESTIONS':
             return [action.payload.data]
             // data is a property of payload

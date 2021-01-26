@@ -21,9 +21,9 @@ class GameContainer extends React.Component {
 }
 
 const mapStateToProps = state => {
-    // console.log("mapStateTopProps", state[0])
+    console.log("mapStateTopProps", state.question[0])
     return {
-        questions: state[0]
+        questions: state.question[0]
     }
 }
 
