@@ -6,12 +6,12 @@ function NavBar(props) {
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="#home">DIY Conversation Cards</Navbar.Brand>
+        <Navbar.Brand href="/">DIY Conversation Cards</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-            <Nav.Link href="#features">Get Started</Nav.Link>
-            <Nav.Link href="#pricing">Start Game</Nav.Link>
+            {/* <Nav.Link href="/form">Get Started</Nav.Link> */}
+            <Nav.Link href="/start-game">Start Game</Nav.Link>
             </Nav>
         </Navbar.Collapse>
         </Navbar>
