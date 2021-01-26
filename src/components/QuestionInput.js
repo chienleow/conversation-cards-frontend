@@ -2,6 +2,8 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Jumbotron from 'react-bootstrap/Jumbotron';
+import {connect} from 'react-redux';
+import {addQuestion} from '../actions/addQuestion';
 
 class QuestionInput extends React.Component {
 
@@ -15,7 +17,8 @@ class QuestionInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addQuestion(this.state, this.props.user.id)
+        console.log("check props", this.props)
+        this.props.addQuestion(this.state)
         this.setState({
             sentence: '',
             category: ''
@@ -44,4 +47,4 @@ class QuestionInput extends React.Component {
     }
 }
 
-export default QuestionInput
+export default connect(null, {addQuestion})(QuestionInput)
