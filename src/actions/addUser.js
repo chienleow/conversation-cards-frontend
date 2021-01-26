@@ -11,7 +11,7 @@ export const addUser = (data, history) => {
         })
         .then(response => response.json)
         .then(name => {
-            dispatch({type:'NEW_USER', payload: name})
+            dispatch({type: 'NEW_USER', payload: name})
             history.push('/form')
         })
 
