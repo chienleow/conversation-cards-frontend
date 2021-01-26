@@ -3,7 +3,6 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import {connect} from 'react-redux';
 import {addUser} from '../actions/addUser';
-// import {Redirect} from 'react-router-dom';
 
 class UserInput extends React.Component {
 
@@ -18,14 +17,16 @@ class UserInput extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addUser(this.state, this.props.history)
+        this.setState({
+            name: ''
+        })
     }
 
     render() {
         return (
             <div>
                 <Form onSubmit={this.handleSubmit}>
-                    <Form.Group controlId="formBasicEmail">
-                        {/* <Form.Label>Username</Form.Label> */}
+                    <Form.Group>
                         <Form.Control type="text" placeholder="Enter username" value={this.state.name} name="name" onChange={this.handleChange}/>
                     </Form.Group>
 

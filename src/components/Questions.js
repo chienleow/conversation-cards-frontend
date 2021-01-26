@@ -4,7 +4,6 @@ import React from 'react';
 const Questions = (props) => {
 
     console.log("Hello", props.questions.questions)
-    // debugger
     return (
         <div>
          {!!props.questions.questions ? props.questions.questions.map(question => <li key={question.id}>{question.attributes.sentence} - {question.attributes.user.name}</li> ):null}

@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-
 import {fetchQuestions} from '../actions/fetchQuestions';
 import Questions from '../components/Questions';
 
@@ -12,7 +11,7 @@ class GameContainer extends React.Component {
 
     render() {
         // console.log("this.props:", this.props)
-        //when props or state change, it rerender
+        //when props or state change, it re-renders
         return (
             <div>
                 <Questions questions={this.props}/>
