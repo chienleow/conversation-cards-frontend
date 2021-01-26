@@ -17,8 +17,8 @@ class QuestionInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log("check props", this.props)
-        this.props.addQuestion(this.state)
+        // debugger
+        this.props.addQuestion(this.state, this.props.user.id)
         this.setState({
             sentence: '',
             category: ''

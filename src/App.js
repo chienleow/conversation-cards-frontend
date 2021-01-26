@@ -4,7 +4,7 @@ import FormContainer from './containers/FormContainer';
 import GameContainer from './containers/GameContainer';
 import HomeContainer from './containers/HomeContainer';
 import Navbar from './components/NavBar';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 class App extends React.Component {
 
@@ -12,7 +12,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navbar/>
-        <BrowserRouter>
+        <BrowserRouter history={this.props.history}>
           <Switch>
             <Route exact path='/form' component={FormContainer}/>
             <Route exact path='/start-game' component={GameContainer}/>
