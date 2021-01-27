@@ -2,7 +2,6 @@ import React from 'react';
 
 // functional component (they are just functions, they don't need render)
 const UserQuestions = (props) => {
-    debugger
 
     // return (
         // <div>

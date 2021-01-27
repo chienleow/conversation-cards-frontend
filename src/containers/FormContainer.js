@@ -11,6 +11,7 @@ class FormContainer extends React.Component {
     }
 
     render() {
+        debugger
         return (
             <div>
                 <QuestionInput/>

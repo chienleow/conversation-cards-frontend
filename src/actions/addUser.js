@@ -11,7 +11,7 @@ export const addUser = (name) => {
         })
         .then(response => response.json())
         .then(name => {
-            dispatch({type: 'NEW_USER', payload: name})
+            dispatch({type: 'ADD_USER', payload: name})
             // dispatch adds new user to Redux Store
         })
     }
