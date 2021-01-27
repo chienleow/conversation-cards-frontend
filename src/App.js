@@ -7,7 +7,7 @@ import Navbar from './components/NavBar';
 import {Switch, Route} from 'react-router-dom';
 
 class App extends React.Component {
-
+// convert this to a functional component
   render() {
     return (
       <div className="App">
