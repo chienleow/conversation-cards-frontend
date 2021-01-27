@@ -3,11 +3,14 @@ import React from 'react';
 // functional component (they are just functions, they don't need render)
 const UserQuestions = (props) => {
 
-    // return (
-        // <div>
-        //  {!!props.questions.questions ? props.questions.questions.map(question => <li key={question.id}>{question.attributes.sentence} - {question.attributes.user.name}</li> ):null}
-        // </div>
-    // )
+    // debugger
+
+    return (
+        <div>
+            hello!
+         {!!props.userQuestions.questions ? (props.userQuestions.questions.sentence + "-" + props.userQuestions.questions.category) : null}
+        </div>
+    )
 }
 
 export default UserQuestions
