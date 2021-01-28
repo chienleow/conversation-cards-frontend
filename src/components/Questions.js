@@ -5,7 +5,7 @@ const Questions = (props) => {
 
     return (
         <div>
-         {!!props.questions.questions ? props.questions.questions.map(question => <li key={question.id}>{question.attributes.sentence} - {question.attributes.user.name}</li> ):null}
+         {!!props.questions ? props.questions.map(question => <li key={question.id}>{question.attributes.sentence} - {question.attributes.user.name}</li> ):'loading'}
         </div>
     )
 }

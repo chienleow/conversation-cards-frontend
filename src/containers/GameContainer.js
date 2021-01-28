@@ -13,7 +13,7 @@ class GameContainer extends React.Component {
         //when props or state change, it re-renders
         return (
             <div>
-                <Questions questions={this.props}/>
+                <Questions questions={this.props.questions}/>
             </div>
         )
     }
