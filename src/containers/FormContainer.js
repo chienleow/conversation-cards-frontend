@@ -6,10 +6,6 @@ import UserQuestions from '../components/UserQuestions';
 
 class FormContainer extends React.Component {
 
-    // componentDidMount() {
-    //     this.props.addQuestion()
-    // }
-
     render() {
         return (
             <div>
@@ -21,9 +17,8 @@ class FormContainer extends React.Component {
 }
 
 const mapStateToProps = state => {
-    debugger
     return {
-        questions: state.question[0]
+        questions: state.question
     }
 }
 
