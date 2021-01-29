@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchQuestions} from '../actions/fetchQuestions';
-import Questions from '../components/Questions';
+import CardFlip from '../components/CardFlip'
 
 class GameContainer extends React.Component {
 
@@ -13,7 +13,7 @@ class GameContainer extends React.Component {
         //when props or state change, it re-renders
         return (
             <div>
-                <Questions questions={this.props.questions}/>
+                <CardFlip questions={this.props.questions}/>
             </div>
         )
     }
