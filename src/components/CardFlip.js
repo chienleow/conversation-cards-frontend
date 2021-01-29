@@ -14,7 +14,6 @@ const CardFlip = (props) => {
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
           <Card style={{ width: '18rem' }}>
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
               <Card.Text>
                 {!!props.questions ? props.questions.map(question => <li key={question.id}>{question.attributes.sentence} - {question.attributes.user.name} - {question.attributes.category}</li> ):'loading'}
               </Card.Text>
