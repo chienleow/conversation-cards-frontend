@@ -10,7 +10,6 @@ const CardFlip = (props) => {
     setIsFlipped(!isFlipped);
   };
 
-      return (
         if (!!props.questions) {
           return (
             <div>
@@ -42,7 +41,6 @@ const CardFlip = (props) => {
             )
           };
         };
-      )
 
 };
 
