@@ -1,37 +1,49 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactCardFlip from 'react-card-flip';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-const Question = (props) => {
+class Question extends React.Component {
 
-    const [isFlipped, setIsFlipped] = useState(false);
+    constructor(props) {
+        super(props)
+        this.state = {
+            isFlipped: false
+        }
+    }
   
-    const handleClick = () => {
-      setIsFlipped(!isFlipped);
+    handleClick = () => {
+      this.setState({
+          isFlipped: !this.state.isFlipped
+        })
     };
 
-    return(
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
-        <Card style={{ width: '18rem' }}>
-            <Card.Body questionId={props.question.id}>
-            <Card.Text>
-                {props.question.attributes.category}
-            </Card.Text>
-            <Button onClick={handleClick}>Open Question</Button>
-            </Card.Body>
-        </Card>
-
-        <Card style={{ width: '18rem' }}>
-            <Card.Body>
-            <Card.Text>
-                {props.question.attributes.sentence} - {props.question.attributes.user.name}
-            </Card.Text>
-            <Button onClick={handleClick}>Back</Button>
-            </Card.Body>
-        </Card>
-        </ReactCardFlip>
-    )
+    render() {
+        
+        const props = this.props
+        
+        return(
+            <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
+            <Card style={{ width: '18rem' }}>
+                <Card.Body question-id={props.question.id}>
+                <Card.Text>
+                    {props.question.attributes.category}
+                </Card.Text>
+                <Button onClick={this.handleClick}>Open Question</Button>
+                </Card.Body>
+            </Card>
+    
+            <Card style={{ width: '18rem' }}>
+                <Card.Body>
+                <Card.Text>
+                    {props.question.attributes.sentence} - {props.question.attributes.user.name}
+                </Card.Text>
+                <Button onClick={this.handleClick}>Back</Button>
+                </Card.Body>
+            </Card>
+            </ReactCardFlip>
+        )
+    }
 }
 
 export default Question
