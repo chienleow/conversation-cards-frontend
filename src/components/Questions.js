@@ -17,7 +17,7 @@ const Questions = (props) => {
               <Card style={{ width: '18rem' }}>
                 <Card.Body key={question.id}>
                   <Card.Text>
-                    {question.attributes.sentence} - {question.attributes.user.name}
+                    {question.attributes.category}
                   </Card.Text>
                   <Button onClick={handleClick}>Open Question</Button>
                 </Card.Body>
@@ -26,7 +26,7 @@ const Questions = (props) => {
               <Card style={{ width: '18rem' }}>
                 <Card.Body>
                   <Card.Text>
-                    {question.attributes.category}
+                    {question.attributes.sentence} - {question.attributes.user.name}
                   </Card.Text>
                   <Button onClick={handleClick}>Back</Button>
                 </Card.Body>
