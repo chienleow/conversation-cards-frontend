@@ -13,7 +13,7 @@ const CardFlip = (props) => {
         if (!!props.questions) {
           return (
             props.questions.map(question => 
-            <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
               <Card style={{ width: '18rem' }}>
                 <Card.Body key={question.id}>
                   <Card.Text>
