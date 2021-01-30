@@ -7,13 +7,14 @@ Issues:
 - NavBar
 - Questions
 - UserQuestions
-- 
+- About
 - 
 
 3 routes
 - /
 - /form
 - /start-game
+- /about
 
 2 container components
 - FormContainer
