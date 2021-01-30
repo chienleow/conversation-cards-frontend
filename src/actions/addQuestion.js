@@ -12,6 +12,7 @@ export const addQuestion = (data) => {
         .then(response => response.json())
         .then(question => {
             dispatch({type: 'ADD_QUESTION', payload: question})
+            // dispatching an action object
         })
 
     }

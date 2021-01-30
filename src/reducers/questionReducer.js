@@ -1,6 +1,5 @@
-const initialState = []
-
-export function questionReducer(state = initialState, action) {
+export function questionReducer(state = [], action) {
+    // setting the initialState to an empty array as a default value, if we have state, use our state
     
     switch(action.type) {
         case 'FETCH_QUESTIONS':
