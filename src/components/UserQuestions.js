@@ -6,7 +6,7 @@ const UserQuestions = (props) => {
 
     return (
         <ListGroup>
-            {!!props.userQuestions.questions ? props.userQuestions.questions.map(question => <ListGroup.Item key={question.id}>{question.sentence} - {question.category}</ListGroup.Item>):null}
+            {!!props.userQuestions.questions ? props.userQuestions.questions.map(question => <ListGroup.Item key={question.id}> <p style={{fontWeight: "bold"}}>Question:</p><p>{question.sentence}</p> <p style={{fontWeight: "bold"}}>Category:</p><p>{question.category}</p></ListGroup.Item>):null}
         </ListGroup>
     )
 }

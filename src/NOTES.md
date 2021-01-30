@@ -10,7 +10,7 @@ Stretch Goals:
 - 
 
 3 routes
-- / (?)
+- /
 - /form
 - /start-game
 
