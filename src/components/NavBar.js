@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-function NavBar(props) {
+function NavBar() {
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">

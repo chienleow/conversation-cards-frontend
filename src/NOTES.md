@@ -8,7 +8,7 @@ Issues:
 - Questions
 - UserQuestions
 - About
-- 
+- App (convert this to functional)
 
 3 routes
 - /
