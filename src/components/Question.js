@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 const Question = (props) => {
-    
+
     const [isFlipped, setIsFlipped] = useState(false);
   
     const handleClick = () => {
@@ -14,7 +14,7 @@ const Question = (props) => {
     return(
         <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
         <Card style={{ width: '18rem' }}>
-            <Card.Body key={question.id}>
+            <Card.Body questionId={props.question.id}>
             <Card.Text>
                 {props.question.attributes.category}
             </Card.Text>
@@ -25,7 +25,7 @@ const Question = (props) => {
         <Card style={{ width: '18rem' }}>
             <Card.Body>
             <Card.Text>
-                {question.attributes.sentence} - {question.attributes.user.name}
+                {props.question.attributes.sentence} - {props.question.attributes.user.name}
             </Card.Text>
             <Button onClick={handleClick}>Back</Button>
             </Card.Body>

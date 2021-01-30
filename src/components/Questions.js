@@ -5,7 +5,7 @@ const Questions = (props) => {
 
         if (!!props.questions) {
           return (
-            props.questions.map(question => <Question question={question}/>)
+            props.questions.map(question => <Question key={question.id} question={question}/>)
           )
           } else {
             return (
