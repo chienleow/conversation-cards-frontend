@@ -10,6 +10,7 @@ function NavBar(props) {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
+            <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/start-game">Start Game</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
             </Nav>
