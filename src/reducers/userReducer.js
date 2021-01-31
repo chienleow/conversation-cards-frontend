@@ -1,6 +1,4 @@
-const initialState = []
-
-export function userReducer(state = initialState, action) {
+export function userReducer(state = [], action) {
     
     switch(action.type) {
         case 'ADD_USER':
