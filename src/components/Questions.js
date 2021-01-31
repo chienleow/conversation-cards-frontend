@@ -4,13 +4,13 @@ import Question from './Question'
 const Questions = (props) => {
 
     if (!!props.questions) {
-          return (
+        return (
             props.questions.map(question => <Question key={question.id} question={question}/>)
-          )
-        } else {
-          return (
-              <div>loading</div>
-          )
+        )
+    } else {
+        return (
+            <div>loading</div>
+        )
     };
 };
 
