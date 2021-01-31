@@ -24,23 +24,23 @@ class Question extends React.Component {
         
         return(
             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
-            <Card>
-                <Card.Body question-id={props.question.id}>
-                <Card.Text>
-                    {props.question.attributes.category}
-                </Card.Text>
-                <Button onClick={this.handleClick}>Open Question</Button>
-                </Card.Body>
-            </Card>
-    
-            <Card>
-                <Card.Body>
-                <Card.Text>
-                    {props.question.attributes.sentence} - {props.question.attributes.user.name}
-                </Card.Text>
-                <Button onClick={this.handleClick}>Back</Button>
-                </Card.Body>
-            </Card>
+                <Card>
+                    <Card.Body question-id={props.question.id}>
+                    <Card.Text>
+                        {props.question.attributes.category}
+                    </Card.Text>
+                    <Button onClick={this.handleClick}>Open Question</Button>
+                    </Card.Body>
+                </Card>
+        
+                <Card>
+                    <Card.Body>
+                    <Card.Text>
+                        {props.question.attributes.sentence} - {props.question.attributes.user.name}
+                    </Card.Text>
+                    <Button onClick={this.handleClick}>Back</Button>
+                    </Card.Body>
+                </Card>
             </ReactCardFlip>
         )
     }
