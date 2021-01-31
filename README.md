@@ -4,7 +4,7 @@
 
 ## Built With
 - Frontend: [React](https://reactjs.org/), [Redux](https://redux.js.org/), [React Bootstrap](https://react-bootstrap.github.io/)
-- Backend: [Ruby on Rails](https://rubyonrails.org/), Project Backend Repo: [Conversation Starter Backend](https://github.com/chienleow/conversation-starter-backend) 
+- Backend: [Ruby on Rails](https://rubyonrails.org/), Project Backend Repo: [Conversation Cards Backend](https://github.com/chienleow/conversation-cards-backend) 
 - Database: [PostgreSQL](https://www.postgresql.org/)
 
 ## Contributing
