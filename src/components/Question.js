@@ -24,7 +24,7 @@ class Question extends React.Component {
         
         return(
             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
-            <Card style={{ width: '18rem' }}>
+            <Card>
                 <Card.Body question-id={props.question.id}>
                 <Card.Text>
                     {props.question.attributes.category}
@@ -33,7 +33,7 @@ class Question extends React.Component {
                 </Card.Body>
             </Card>
     
-            <Card style={{ width: '18rem' }}>
+            <Card>
                 <Card.Body>
                 <Card.Text>
                     {props.question.attributes.sentence} - {props.question.attributes.user.name}

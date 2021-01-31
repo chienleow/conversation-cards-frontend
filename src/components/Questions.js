@@ -1,11 +1,16 @@
 import React from "react";
-import Question from './Question'
+import Question from './Question';
+import CardDeck from "react-bootstrap/CardDeck";
 
 const Questions = (props) => {
 
     if (!!props.questions) {
         return (
-            props.questions.map(question => <Question key={question.id} question={question}/>)
+            props.questions.map(question =>
+              <CardDeck>
+                  <Question key={question.id} question={question}/>
+              </CardDeck>
+            )
         )
     } else {
         return (
