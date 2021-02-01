@@ -1,7 +1,7 @@
 import React from "react";
 import Question from './Question';
 import CardDeck from "react-bootstrap/CardDeck";
-// import Container from "react-bootstrap/Container";
+import Spinner from "react-bootstrap/Spinner";
 
 const Questions = (props) => {
 
@@ -15,7 +15,9 @@ const Questions = (props) => {
         )
     } else {
         return (
-            <div>loading</div>
+            <Spinner animation="border" role="status">
+                <span className="sr-only">Loading...</span>
+            </Spinner>
         )
     };
 };
