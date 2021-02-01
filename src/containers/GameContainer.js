@@ -19,7 +19,7 @@ class GameContainer extends React.Component {
 
 const mapStateToProps = state => {
     // mapping the state from Redux store to props, giving us access to this component(GameContainer).
-    console.log("mapStateTopProps", state.question[0])
+    // console.log("mapStateTopProps", state.question[0])
     return {
         questions: state.question[0]
     }
