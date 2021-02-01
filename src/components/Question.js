@@ -2,6 +2,7 @@ import React from "react";
 import ReactCardFlip from 'react-card-flip';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import LikeButton from '../components/LikeButton';
 
 class Question extends React.Component {
 
@@ -31,6 +32,7 @@ class Question extends React.Component {
                     </Card.Text>
                     <Button onClick={this.handleClick}>Open Question</Button>
                     </Card.Body>
+                    <LikeButton key={props.question.id}/>
                 </Card>
         
                 <Card>
