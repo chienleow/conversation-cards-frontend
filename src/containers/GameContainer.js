@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchQuestions} from '../actions/fetchQuestions';
-import Questions from '../components/Questions'
+import Questions from '../components/Questions';
 
 class GameContainer extends React.Component {
 

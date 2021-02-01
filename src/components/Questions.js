@@ -22,4 +22,4 @@ const Questions = (props) => {
     };
 };
 
-export default Questions;
+export default Questions

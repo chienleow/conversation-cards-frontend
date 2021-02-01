@@ -7,7 +7,7 @@ import Navbar from './components/NavBar';
 import {Switch, Route} from 'react-router-dom';
 
 const App = () => {
-// convert this to a functional component
+
     return (
       <div className="App">
         <Navbar/>
@@ -21,4 +21,4 @@ const App = () => {
     );
 }
 
-export default App;
+export default App
