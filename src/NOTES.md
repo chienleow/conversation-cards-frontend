@@ -15,3 +15,9 @@
 - FormContainer
 - GameContainer
 - HomeContainer
+
+
+Live coding:
+1. click button to sort categories
+2. initial state = unsorted
+3. once clicked = sorted
