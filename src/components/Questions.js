@@ -53,13 +53,8 @@ class Questions extends React.Component {
                 </Spinner>
 
             )
-        };
+        }
     }
-
-    // handleClick = () => {
-    //     const sortedCat = props.questions
-    //     sortedCat.sort((a, b)) => (a.questions)
-
-};
+}
 
 export default Questions
