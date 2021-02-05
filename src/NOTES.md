@@ -37,3 +37,7 @@ items.sort(function(a, b) {
   // names must be equal
   return 0;
 });
+
+
+if button = this.state.sortedCat
+if button = this.props.questions

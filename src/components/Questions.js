@@ -2,15 +2,10 @@ import React from "react";
 import Question from './Question';
 import CardDeck from "react-bootstrap/CardDeck";
 import Spinner from "react-bootstrap/Spinner";
-
-// Sort button steps:
-// - convert to class, and add state
-// - I want to sort the category first before mapping it
-// - if sorted is true, show the sorted array
+import Button from "react-bootstrap/Button";
 
 class Questions extends React.Component {
     constructor(props) {
-        // console.log("z", props)
         super(props)
         this.state = {
             sortedCat: []
@@ -26,10 +21,12 @@ class Questions extends React.Component {
 
     render() {
 
+        let button = <Button variant="secondary" onClick={this.handleClick}>Sort by Categories</Button>
+
         if (this.state.sortedCat.length !== 0) {
             return (
                 <>
-                <button onClick={this.handleClick}>Sort by Categories</button>
+                {button}
                 {this.state.sortedCat.map(question =>
                   <CardDeck>
                       <Question key={question.id} question={question}/>
@@ -40,17 +37,21 @@ class Questions extends React.Component {
 
         } else if (this.state.sortedCat.length === 0 && !!this.props.questions) {
             return (
-                this.props.questions.map(question =>
+                <>
+                {button}
+                {this.props.questions.map(question =>
                   <CardDeck>
                       <Question key={question.id} question={question}/>
                   </CardDeck>
-                )
+                )}
+                </>
             )
         } else {
             return (
                 <Spinner animation="border" role="status">
                     <span className="sr-only">Loading...</span>
                 </Spinner>
+
             )
         };
     }
