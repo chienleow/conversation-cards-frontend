@@ -13,8 +13,9 @@ class Questions extends React.Component {
     }
 
     handleClick = () => {
+        let copyCat = this.props.questions.slice()
         this.setState({
-            sortedCat: this.props.questions.sort((a, b) => (a.attributes.category < b.attributes.category) ? -1 : 1)
+            sortedCat: copyCat.sort((a, b) => (a.attributes.category < b.attributes.category) ? -1 : 1)
         })
 
     }
@@ -28,8 +29,8 @@ class Questions extends React.Component {
                 <>
                 {button}
                 {this.state.sortedCat.map(question =>
-                  <CardDeck>
-                      <Question key={question.id} question={question}/>
+                  <CardDeck key={question.id}>
+                      <Question question={question}/>
                   </CardDeck>
                 )}
                 </>
@@ -40,13 +41,13 @@ class Questions extends React.Component {
                 <>
                 {button}
                 {this.props.questions.map(question =>
-                  <CardDeck>
-                      <Question key={question.id} question={question}/>
+                  <CardDeck key={question.id}>
+                      <Question question={question}/>
                   </CardDeck>
                 )}
                 </>
             )
-            
+
         } else {
             return (
                 <Spinner animation="border" role="status">
