@@ -7,11 +7,13 @@ class GameContainer extends React.Component {
 
     componentDidMount() {
         this.props.fetchQuestions()
+        console.log("a")
     }
 
     render() {
         //when props or state change, it re-renders
-        // console.log(this.props)
+        console.log("b")
+        console.log("b", this.props.questions)
         return (
             <Questions questions={this.props.questions}/>
         )
@@ -21,6 +23,7 @@ class GameContainer extends React.Component {
 const mapStateToProps = state => {
     // mapping the state from Redux store to props, giving us access to this component(GameContainer).
     // console.log("mapStateTopProps", state.question[0])
+    console.log("c")
     return {
         questions: state.question[0]
     }
