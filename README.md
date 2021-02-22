@@ -1,6 +1,6 @@
 # React Redux Final Project: Conversation Cards App
 
-**User Story:** Users should be able to create questions. Questions will be stored and shuffled. During the game, users take turn opening new question for all the participants to answer.
+Users should be able to create questions. Questions will be stored and shuffled. During the game, users take turn opening new question for all the participants to answer.
 
 ## Built With
 - Frontend: [React](https://reactjs.org/), [Redux](https://redux.js.org/), [React Bootstrap](https://react-bootstrap.github.io/)
