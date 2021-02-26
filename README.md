@@ -7,6 +7,9 @@ Users should be able to create questions. Questions will be stored and shuffled.
 - Backend: [Ruby on Rails](https://rubyonrails.org/), Project Backend Repo: [Conversation Cards Backend](https://github.com/chienleow/conversation-cards-backend) 
 - Database: [PostgreSQL](https://www.postgresql.org/)
 
+## Demo
+- [Walkthrough](https://youtu.be/wobJ0uPMuHo)
+
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/chienleow/conversation-cards-frontend. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
